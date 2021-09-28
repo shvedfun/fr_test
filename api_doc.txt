@@ -1,0 +1,680 @@
+openapi: 3.0.2
+info:
+  title: "\u0422\u0435\u0441\u0442\u043E\u0432\u043E\u0435 \u0437\u0430\u0434\u0430\
+    \u043D\u0438\u0435"
+  version: 1.0.0
+  description: "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 API"
+paths:
+  /opros/:
+    get:
+      operationId: listOpros
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OprosSer'
+          description: ''
+      tags:
+      - opros
+    post:
+      operationId: createOpros
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OprosSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OprosSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OprosSer'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OprosSer'
+          description: ''
+      tags:
+      - opros
+  /opros/{id}/:
+    get:
+      operationId: retrieveOpros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this opros.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OprosSer'
+          description: ''
+      tags:
+      - opros
+    put:
+      operationId: updateOpros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this opros.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OprosSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OprosSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OprosSer'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OprosSer'
+          description: ''
+      tags:
+      - opros
+    patch:
+      operationId: partialUpdateOpros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this opros.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OprosSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OprosSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OprosSer'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OprosSer'
+          description: ''
+      tags:
+      - opros
+    delete:
+      operationId: destroyOpros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this opros.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - opros
+  /vopros/:
+    get:
+      operationId: listVopros
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VoprosSer'
+          description: ''
+      tags:
+      - vopros
+    post:
+      operationId: createVopros
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VoprosSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VoprosSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VoprosSer'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoprosSer'
+          description: ''
+      tags:
+      - vopros
+  /vopros/{id}/:
+    get:
+      operationId: retrieveVopros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vopros.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoprosSer'
+          description: ''
+      tags:
+      - vopros
+    put:
+      operationId: updateVopros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vopros.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VoprosSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VoprosSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VoprosSer'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoprosSer'
+          description: ''
+      tags:
+      - vopros
+    patch:
+      operationId: partialUpdateVopros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vopros.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VoprosSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VoprosSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/VoprosSer'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoprosSer'
+          description: ''
+      tags:
+      - vopros
+    delete:
+      operationId: destroyVopros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vopros.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - vopros
+  /otvet/:
+    get:
+      operationId: listOtvets
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - otvet
+    post:
+      operationId: createOtvet
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - otvet
+  /otvet/{id}/:
+    get:
+      operationId: retrieveOtvet
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this otvet.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - otvet
+    put:
+      operationId: updateOtvet
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this otvet.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - otvet
+    patch:
+      operationId: partialUpdateOtvet
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this otvet.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - otvet
+    delete:
+      operationId: destroyOtvet
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this otvet.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - otvet
+  /useropros/:
+    get:
+      operationId: listOpros
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OprosSer'
+          description: ''
+      tags:
+      - useropros
+  /useropros/{id}/:
+    get:
+      operationId: retrieveOpros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this opros.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OprosSer'
+          description: ''
+      tags:
+      - useropros
+  /uservopros/:
+    get:
+      operationId: listVopros
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VoprosSer'
+          description: ''
+      tags:
+      - uservopros
+  /uservopros/{id}/:
+    get:
+      operationId: retrieveVopros
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vopros.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoprosSer'
+          description: ''
+      tags:
+      - uservopros
+  /userotvets/:
+    get:
+      operationId: listOtvets
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - userotvets
+    post:
+      operationId: createOtvet
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - userotvets
+  /userotvets/{id}/:
+    get:
+      operationId: retrieveOtvet
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this otvet.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - userotvets
+    put:
+      operationId: updateOtvet
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this otvet.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - userotvets
+    patch:
+      operationId: partialUpdateOtvet
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this otvet.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OtvetSer'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OtvetSer'
+          description: ''
+      tags:
+      - userotvets
+    delete:
+      operationId: destroyOtvet
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this otvet.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - userotvets
+components:
+  schemas:
+    OprosSer:
+      type: object
+      properties:
+        url:
+          type: string
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        start:
+          type: string
+          format: date
+        finish:
+          type: string
+          format: date
+        desc:
+          type: string
+      required:
+      - name
+      - start
+      - finish
+      - desc
+    VoprosSer:
+      type: object
+      properties:
+        url:
+          type: string
+          readOnly: true
+        vopros:
+          type: string
+        tip:
+          enum:
+          - '00'
+          - '01'
+          - '02'
+          type: string
+        opros:
+          type: string
+      required:
+      - vopros
+      - tip
+      - opros
+    OtvetSer:
+      type: object
+      properties:
+        url:
+          type: string
+          readOnly: true
+        user_id:
+          type: integer
+        otvet:
+          type: string
+          maxLength: 1000
+        vopros:
+          type: string
+      required:
+      - user_id
+      - otvet
+      - vopros
