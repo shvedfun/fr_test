@@ -32,6 +32,7 @@ class Vopros(models.Model):
     vopros = models.TextField()
     tip = models.CharField(max_length=2, choices=tips)
     opros = models.ForeignKey(Opros, on_delete=models.CASCADE)
+    standart_otvet = models.CharField(max_length=1000, null=True)
     def __str__(self):
         return self.opros.name + "|" + self.vopros
 

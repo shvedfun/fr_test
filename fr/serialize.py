@@ -6,7 +6,6 @@ class OprosSer(serializers.HyperlinkedModelSerializer):
         model = models.Opros
         fields = '__all__'
 
-
 class VoprosSer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Vopros
